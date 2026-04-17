@@ -13,3 +13,6 @@ df -h
 echo
 echo "Memory usage:"
 free -h
+echo
+echo "Kernel:"
+uname -r
