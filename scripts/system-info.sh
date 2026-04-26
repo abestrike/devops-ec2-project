@@ -28,4 +28,4 @@ log_file="logs/system-info-$(date +%F-%H-%M-%S).log"
 echo
 echo "Saved to $log_file"
 # Delete logs older than 1 day
-find logs -type f -mtime +1 -delete
+find logs -type f -name "system-info-*.log" | sort | head -n -5 | xargs -r rm --
