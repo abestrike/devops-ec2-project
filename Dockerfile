@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 WORKDIR /app
 
-COPY system-info.sh .
+COPY scripts/system-info.sh .
 
 RUN chmod +x system-info.sh
 
