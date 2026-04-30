@@ -1,4 +1,3 @@
-# DevOps EC2 Project
 
 This project contains simple Bash scripts for practicing a DevOps workflow.
 

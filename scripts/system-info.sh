@@ -22,7 +22,11 @@ log_file="logs/system-info-$(date +%F-%H-%M-%S).log"
   echo "Kernel:"
   uname -r
   echo
-  echo "This is my server running on AWS"
+  if hostnamectl | grep -qi "amazon\|aws"; then
+    echo "Environment: AWS EC2"
+  else
+    echo "Environment: Local Ubuntu / Linux machine"
+  fi
 } | tee "$log_file"
 
 echo
